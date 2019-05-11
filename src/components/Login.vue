@@ -17,7 +17,6 @@
               <label for="password">Password</label>   
             </div>
             <a class="padding-button waves-effect waves-light btn" v-on:click="loginuser()">Login</a>
-            <router-link to="/about"><a class="padding-button waves-effect waves-light btn"> ainda nao tenho uma conta </a></router-link>
           </div>
         </form>
       </div>
@@ -27,7 +26,7 @@
 
 <script>
 
-import autenticate from '@/services/login'
+import autenticate from '@/services/user'
 import { store } from '@/store'
 
 export default {
