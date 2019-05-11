@@ -1,1 +1,1 @@
-# tipsta-frontend-vuejs
+# frontend-vuejs
