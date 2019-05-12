@@ -7,7 +7,7 @@ export default{
             password: password
         })
     },
-    register(url, name, email, password, cpf, instituition, phone, bornDate, sex){
+    register(url, name, email, password, cpf, institution, phone, bornDate, sex){
         return http.post(url,{
             name: name,
             cpf: cpf,
@@ -16,7 +16,7 @@ export default{
             phone: phone,
             born_date: bornDate,
             sex: sex,
-            instituition: instituition
+            institution: institution
         })
     }
 }

@@ -33,7 +33,7 @@
               <label for="phone">Phone number</label>
             </div>
             <div class="input-field col s6">
-              <input id="date" type="text" class="validate" v-model="date">
+              <input id="date" type="text" class="validate" v-model="data">
               <label for="date">aqui vai ser o calendario de data de nascimento</label>
             </div>
           </div>
@@ -43,13 +43,13 @@
               <form action="#">
                 <p>
                   <label>
-                    <input name="group1" type="radio" checked v-model="sex" />
+                    <input name="group1" type="radio" value="M" checked v-model="sex" />
                     <span>Masculino</span>
                   </label>
                 </p>
                 <p>
                   <label>
-                    <input name="group1" type="radio" v-model="sex" />
+                    <input name="group1" type="radio" value="F" v-model="sex" />
                     <span>Feminino</span>
                   </label>
                 </p>
@@ -90,10 +90,17 @@ export default {
     register () {
       userapi.register('user',this.name,this.email,this.password,this.cpf,
       this.instituition,this.phone,this.data,this.sex).then(response => {
-        alert(response)
+        this.$swal('OK!!!','you re registered', 'success')
+        this.$router.push('/login')
+      }).catch(error => {
+        this.$swal('ERROR!!!','you dont registered', 'error')
       })
-      router.go(-1)
+      
+    },
+    alertswal(message){
+      this.$swal(message)
     }
+    
   }
   
 }
