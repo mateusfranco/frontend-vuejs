@@ -18,5 +18,11 @@ export default{
             sex: sex,
             institution: institution
         })
+    },
+    information(url, email, token){
+        return http.get(url,{
+            email: email,
+            token: token
+        })    
     }
 }
