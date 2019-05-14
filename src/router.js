@@ -28,10 +28,16 @@ export default new Router({
       path: '/login',
       name: 'login',
       component: () => import(/** */'./views/Login.vue')
-    },{
+    },
+    {
       path: '/register',
       name: 'register',
       component: () => import(/** */'./views/Register.vue')
+    },
+    {
+      path: '/hours',
+      name: 'hours',
+      component: () => import(/** */'./views/Hours.vue')
     }
 
   ]
