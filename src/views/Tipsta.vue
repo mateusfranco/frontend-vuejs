@@ -1,17 +1,18 @@
 <template>
   <div class="tipsta">
-    <Calendar></Calendar>
+    <Lists></Lists>
   </div>
 </template>
 
 <script>
-// import Mercadinho from '@/components/Mercadinho.vue'
-import Calendar from '@/components/Calendar.vue'
+
+import Lists from '@/components/Lists.vue'
+// import Calendar from '@/components/Calendar.vue'
 
 export default {
   name: 'tipsta',
   components: {
-    Calendar
+    Lists
   }
 }
 </script>

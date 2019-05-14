@@ -36,6 +36,14 @@ export default {
 
       }
     },
+    methods: {
+      addEvent(event) {
+        this.itens.add(event)
+      },
+      delEvent(event) {
+        this.itens.split( this.indexOf(event), 1)
+      }
+    },
 }
 </script>
 
