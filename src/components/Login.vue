@@ -43,6 +43,7 @@ export default {
         this.$store.commit('setEmail',this.email)
         this.$store.commit('setToken',response.data.token)
         this.$store.commit('modifyLogin', true)
+        this.$router.push('/')
       })
     }
   }

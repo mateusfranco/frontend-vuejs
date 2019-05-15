@@ -19,11 +19,19 @@ export default{
             institution: institution
         })
     },
+<<<<<<< HEAD
     information(email, token){
         return http.post('userinfo',{
             email: email,
             token: token
         })
+=======
+    information(url, email, token){
+        return http.get(url,{
+            email: email,
+            token: token
+        })    
+>>>>>>> user-core
     }
 
 }
