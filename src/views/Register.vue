@@ -88,7 +88,7 @@ export default {
   },
   methods:{
     register () {
-      userapi.register('user',this.name,this.email,this.password,this.cpf,
+      userapi.register(this.name,this.email,this.password,this.cpf,
       this.instituition,this.phone,this.data,this.sex).then(response => {
         this.$swal('OK!!!','you re registered', 'success')
         this.$router.push('/login')

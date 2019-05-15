@@ -39,7 +39,7 @@ export default {
   },
   methods: {
     loginuser: function () {
-      autenticate.login('user/login',this.email,this.password).then(response => {
+      autenticate.login(this.email,this.password).then(response => {
         this.$store.commit('setEmail',this.email)
         this.$store.commit('setToken',response.data.token)
         this.$store.commit('modifyLogin', true)
