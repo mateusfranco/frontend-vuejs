@@ -1,6 +1,7 @@
 <template>
   <div class="tipsta">
     <Lists></Lists>
+    <router-link to="/registerevent"><a class="padding-button waves-effect waves-light btn"> perdir um novo evento </a></router-link>
   </div>
 </template>
 

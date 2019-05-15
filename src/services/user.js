@@ -1,14 +1,14 @@
-import { http } from './config'
+import { http } from './apiUser'
 
 export default{
-    login(url, email, password){
-        return http.post(url,{
+    login( email, password){
+        return http.post('user/login',{
             email: email,
             password: password
         })
     },
-    register(url, name, email, password, cpf, institution, phone, bornDate, sex){
-        return http.post(url,{
+    register(name, email, password, cpf, institution, phone, bornDate, sex){
+        return http.post('user',{
             name: name,
             cpf: cpf,
             email: email,
@@ -18,5 +18,12 @@ export default{
             sex: sex,
             institution: institution
         })
+    },
+    information(email, token){
+        return http.post('userinfo',{
+            email: email,
+            token: token
+        })
     }
+
 }
