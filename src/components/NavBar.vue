@@ -1,7 +1,7 @@
 <template>
   <div>
     <nav>
-      <div class="nav-wrapper">
+      <div class="nav-wrapper container">
         <a href="#" class="brand-logo right">Logo</a>
         <ul id="nav-mobile" class="left hide-on-med-and-down">
           <div v-if="$store.getters.login">

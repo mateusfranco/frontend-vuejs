@@ -1,7 +1,10 @@
 import { http } from './apiEvent'
 
 export default{
-    list(email, token){
+    list(){
+        return http.get('event')
+    },
+    listForUser(email, token){
         return http.post('event',{
             email: email,
             token: token

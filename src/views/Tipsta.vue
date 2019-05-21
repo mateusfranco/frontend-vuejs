@@ -7,13 +7,22 @@
 
 <script>
 
-import Lists from '@/components/Lists.vue'
+import Event from '@/services/event.js'
+import { store } from '@/store'
+
 // import Calendar from '@/components/Calendar.vue'
 
 export default {
   name: 'tipsta',
   components: {
-    Lists
-  }
+  },
+  mounted() {
+    alert("executou ao entrar")
+    Event.listForUser(this.$store.getters.email,this.$store.getters.token).then(response => {
+      console.log(response)
+      // Lists.addEvent()  
+    })
+    
+  },
 }
 </script>
