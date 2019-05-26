@@ -24,6 +24,13 @@ export default new Router({
       name: 'tipsta',
       component: () => import(/**/'./views/Tipsta.vue')
     },
+
+    {
+      path: '/sisco',
+      name: 'sisco',
+      component: () => import(/**/'./views/Sisco.vue')
+    },
+
     {
       path: '/login',
       name: 'login',

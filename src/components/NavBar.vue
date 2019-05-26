@@ -7,6 +7,7 @@
           <div v-if="$store.getters.login">
             <li><router-link to="/"><h5>Home</h5></router-link></li>
             <li><router-link to="/tipsta"><h5>Tipsta</h5></router-link></li>
+            <li><router-link to="/sisco"><h5>Sisco</h5></router-link></li>
             <li><router-link to="/about"><h5>about</h5></router-link></li>
           </div>
           <div v-else>

@@ -1,4 +1,6 @@
 import { http } from './apiUser'
+import { http2 } from './apiUser'
+import { http3 } from './apiUser'
 
 export default{
     login( email, password){
@@ -24,6 +26,18 @@ export default{
             email: email,
             token: token
         })
+    },
+    verifyCpf(cpf){
+        return http2.get('',{
+            params:{
+                cpf: cpf 
+            }
+        })
+    },
+    PermissionSet(email,level){
+        return http3.post('permission_Add',{
+            email: email,
+            level: level
+        })
     }
-
 }
