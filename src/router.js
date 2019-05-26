@@ -27,7 +27,7 @@ export default new Router({
 
     {
       path: '/sisco',
-      name: 'sisco',
+      name: 'siscohome',
       component: () => import(/**/'./views/Sisco.vue')
     },
 
