@@ -40,10 +40,16 @@ export default new Router({
       path: '/register',
       name: 'register',
       component: () => import(/** */'./views/Register.vue')
-    },{
+    },
+    {
       path: '/registerevent',
       name: 'registerevent',
       component: () => import(/** */'./views/event/RegisterEvent.vue')
+    },
+    {
+      path: '/submission',
+      name: 'submission',
+      component: () => import(/** */'./views/SubmissionArchive.vue')
     }
 
   ]

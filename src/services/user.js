@@ -34,7 +34,7 @@ export default{
             }
         })
     },
-    PermissionSet(email,level){
+    permissionSet(email,level){
         return http3.post('permission_Add',{
             email: email,
             level: level

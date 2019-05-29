@@ -90,15 +90,16 @@ export default {
     register () {
       userapi.register(this.name,this.email,this.password,this.cpf,
       this.instituition,this.phone,this.data,this.sex).then(response => {
-        this.$swal('OK!!!','you re registered', 'success')
-        userapi.verifyCpf(this.cpf).then(() => {
-          var exists = response.data.cpf
-          if(exists == '1'){
-            userapi.permissionSet(this.email, 1).then( () => {
-              alert('professor cadastrado')
-            })
-          }
+        var exists = 0
+        userapi.verifyCpf(this.cpf, ).then(() => {
+          exists = response.data.cpf
+          userapi.permissionSet(this.email, 1).then( () => {
+            alert('professor cadastrado')
+          })
+        
         })
+        
+        this.$swal('OK!!!','you registered', 'success')
         this.$router.push('/login')
       }).catch(() => {
         this.$swal('ERROR!!!','you dont registered', 'error')
