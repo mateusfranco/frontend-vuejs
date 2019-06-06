@@ -3,8 +3,8 @@
     <div class="welcome container">
       <div class="card">
         <div class="card-content ">
-          <h1>Welcome</h1>
-          <h4>we are happy because you are here</h4>
+          <h1>Bem-vindo</h1>
+          <h4>Estamos felizes por voce estar aqui</h4>
         </div>
         <div class="card-action">
           <!-- links -->
